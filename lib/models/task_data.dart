@@ -9,4 +9,19 @@ class TaskData extends ChangeNotifier {
     Task(name: 'Acheter du jjjj', category: 'Courses'),
     Task(name: 'Acheter du dgfdg', category: 'Courses'),
   ];
+
+  void updateCheck(Task task) {
+    task.toogleCheck();
+    notifyListeners();
+  }
+
+  void addTask(String newTaskTitle) {
+    tasks.add(Task(name: newTaskTitle));
+    notifyListeners();
+  }
+
+  void removeTask(Task task) {
+    tasks.remove(task);
+    notifyListeners();
+  }
 }

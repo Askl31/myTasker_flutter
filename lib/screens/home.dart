@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasker/widgets/menu_floatingButton.dart';
 import 'package:tasker/widgets/tasks_list.dart';
 
 class Home extends StatelessWidget {
@@ -6,21 +7,22 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: Container(
-        width: 64.0,
-        height: 64.0,
-        child: FloatingActionButton(
-          backgroundColor: Colors.white,
-          child: Icon(
-            Icons.add,
-            color: Color(0xFF006CFF),
-            size: 24.0,
-          ),
-          onPressed: () {
-            //TODO : action FloatingButton
-          },
-        ),
-      ),
+      floatingActionButton: MenuFloatingButton(),
+      // Container(
+      //   width: 64.0,
+      //   height: 64.0,
+      //   child: FloatingActionButton(
+      //     backgroundColor: Colors.white,
+      //     child: Icon(
+      //       Icons.add,
+      //       color: Color(0xFF006CFF),
+      //       size: 24.0,
+      //     ),
+      //     onPressed: () {
+      //       MenuFloatingButton();
+      //     },
+      //   ),
+      // ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,7 +32,7 @@ class Home extends StatelessWidget {
               top: 60.0,
             ),
             child: Text(
-              'Today',
+              'Aujourd\'hui',
               style: TextStyle(
                 fontSize: 32, /*TODO : changer police*/
               ),
@@ -42,7 +44,7 @@ class Home extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 60.0, top: 32.0, bottom: 15.0),
             child: Text(
-              'Lists',
+              'Listes',
               style: TextStyle(
                 color: Color(0X70252A31),
                 fontSize: 16, /*TODO : changer police*/
